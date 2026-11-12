@@ -44,6 +44,9 @@ class Index:
         check_call(self._client_cmd_base + ["upload", "--index", self.name] + [str(i) for i in files])
 
 
+Index.__module__ = "devpi_process"
+
+
 __all__ = [
     "Index",
 ]

@@ -177,6 +177,9 @@ class IndexServer:
         return index
 
 
+IndexServer.__module__ = "devpi_process"
+
+
 __all__ = [
     "IndexServer",
 ]

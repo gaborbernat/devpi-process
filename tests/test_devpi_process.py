@@ -25,6 +25,10 @@ def test_index_upload_type_hints() -> None:
     assert get_type_hints(Index.upload)["files"] is Path
 
 
+def test_public_class_module_paths() -> None:
+    assert (Index.__module__, IndexServer.__module__) == ("devpi_process", "devpi_process")
+
+
 @pytest.fixture(scope="session")
 def demo_backend() -> ModuleType:
     spec = spec_from_file_location("demo_pkg_inline.build", str(Path(__file__).parent / "demo_pkg_inline" / "build.py"))
